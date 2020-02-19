@@ -1,0 +1,13 @@
+<section>
+  <main>
+    <h1>My Thoughts</h1>
+    <button class="newthoughts">New Thought</button>
+    <div class="social-post-container">
+      <app-post
+        *ngFor="let post of posts; index as i"
+        [postRef]="post"
+        (removed)="removePost(i)"
+      ></app-post>
+    </div>
+  </main>
+</section>
